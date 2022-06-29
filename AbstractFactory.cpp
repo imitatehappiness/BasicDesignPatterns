@@ -86,5 +86,5 @@ int main() {
     for (int i=0; i < 3; i++) {
         pizzas[i]->draw();
     }
-
+    return 0;
 }
