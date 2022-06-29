@@ -38,7 +38,7 @@ public:
 class HawaiianPizza: public Pizza {
 public:
     void draw() {
-        cout << "Ellipse " << mID << endl;
+        cout << "HawaiianPizza " << mID << endl;
     }
 };
 
