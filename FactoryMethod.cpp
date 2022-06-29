@@ -64,4 +64,5 @@ int main(){
     PatternFactoryMethod::pizzaInformation(PatternFactoryMethod::PizzaFactory::HamMushroom);
     PatternFactoryMethod::pizzaInformation(PatternFactoryMethod::PizzaFactory::Deluxe);
     PatternFactoryMethod::pizzaInformation(PatternFactoryMethod::PizzaFactory::Hawaiian);
+    return 0;
 }
