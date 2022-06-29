@@ -77,7 +77,7 @@ public:
     }
 };
 
-/// @class PizzaBuilder - Direction
+/// @class Cook - Direction
 class Cook{
 public:
     void openPizza(){
