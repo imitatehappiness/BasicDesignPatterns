@@ -1,5 +1,5 @@
 #include <iostream>
-#define SIMPLE
+#define FIRST_MIX
 
 using namespace std;
 
@@ -72,9 +72,9 @@ public:
 }
 
 int main() {
-#ifdef SIMPLE
+#ifdef FIRST_MIX
     PatternAbstractFactory::Factory* factory = new PatternAbstractFactory::MixOneFactory;
-#elif ROBUST
+#elif SECOND_MIX
     PatternAbstractFactory::Factory* factory = new PatternAbstractFactory::MixSecondFactory;
 #endif
     PatternAbstractFactory::Pizza* pizzas[3];
