@@ -5,9 +5,9 @@ using namespace std;
 
 namespace PatternAbstractFactory{
 
-class Shape {
+class Pizza {
 public:
-    Shape(){
+    Pizza(){
         mID = mTotal++;
     }
     virtual void draw() = 0;
@@ -16,84 +16,75 @@ protected:
     static int mTotal;
 };
 
-int Shape::mTotal = 0;
+int Pizza::mTotal = 0;
 
 /// @class Circle - AbstructProduct
-class Circle : public Shape {
+class HamAndMushroomPizza: public Pizza {
 public:
     void draw() {
-        cout << "circle " << mID << ": draw" << endl;
+        cout << "HamAndMushroomPizza " << mID << endl;
     }
 };
 
 /// @class Square - AbstructProduct
-class Square : public Shape {
+class DeluxePizza: public Pizza {
 public:
     void draw() {
-        cout << "square " << mID << ": draw" << endl;
+        cout << "DeluxePizza " << mID << endl;
     }
 };
 
 /// @class Ellipse - AbstructProduct
-class Ellipse : public Shape {
+class HawaiianPizza: public Pizza {
 public:
     void draw() {
-        cout << "ellipse " << mID << ": draw" << endl;
-    }
-};
-
-/// @class Rectangle - AbstructProduct
-class Rectangle : public Shape {
-public:
-    void draw() {
-        cout << "rectangle " << mID << ": draw" << endl;
+        cout << "Ellipse " << mID << endl;
     }
 };
 
 /// @class Factory - AbstructFactory
 class Factory {
 public:
-    virtual Shape* createCurvedInstance() = 0;
-    virtual Shape* createStraightInstance() = 0;
+    virtual Pizza* createFirstPizza() = 0;
+    virtual Pizza* createSecondPizza() = 0;
 };
 
-class SimpleShapeFactory : public Factory {
+class MixOneFactory : public Factory {
 public:
-    Shape* createCurvedInstance() {
-        return new Circle;
+    Pizza* createFirstPizza() {
+        return new HamAndMushroomPizza;
     }
-    Shape* createStraightInstance() {
-        return new Square;
+    Pizza* createSecondPizza() {
+        return new DeluxePizza;
     }
 };
 
-class RobustShapeFactory : public Factory {
+class MixSecondFactory : public Factory {
 public:
-    Shape* createCurvedInstance()   {
-        return new Ellipse;
+    Pizza* createFirstPizza()   {
+        return new DeluxePizza;
     }
-    Shape* createStraightInstance() {
-        return new Rectangle;
+    Pizza* createSecondPizza() {
+        return new HawaiianPizza;
     }
 };
 
 }
 
-
 int main() {
 #ifdef SIMPLE
-    PatternAbstractFactory::Factory* factory = new PatternAbstractFactory::SimpleShapeFactory;
+    PatternAbstractFactory::Factory* factory = new PatternAbstractFactory::MixOneFactory;
 #elif ROBUST
-    PatternAbstractFactory::Factory* factory = new PatternAbstractFactory::RobustShapeFactory;
+    PatternAbstractFactory::Factory* factory = new PatternAbstractFactory::MixSecondFactory;
 #endif
-    PatternAbstractFactory::Shape* shapes[3];
+    PatternAbstractFactory::Pizza* pizzas[3];
 
-    shapes[0] = factory->createCurvedInstance();   // shapes[0] = new Ellipse;
-    shapes[1] = factory->createStraightInstance(); // shapes[1] = new Rectangle;
-    shapes[2] = factory->createCurvedInstance();   // shapes[2] = new Ellipse;
+    pizzas[0] = factory->createFirstPizza();   // shapes[0] = new Ellipse;
+    pizzas[1] = factory->createSecondPizza();  // shapes[1] = new Rectangle;
+    pizzas[2] = factory->createFirstPizza();   // shapes[2] = new Ellipse;
 
     for (int i=0; i < 3; i++) {
-        shapes[i]->draw();
+        pizzas[i]->draw();
     }
 
 }
