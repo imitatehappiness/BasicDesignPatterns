@@ -84,7 +84,7 @@ int main() {
 #ifdef SIMPLE
     PatternAbstractFactory::Factory* factory = new PatternAbstractFactory::SimpleShapeFactory;
 #elif ROBUST
-    PatternAbstractFactory::Factory* factory = new RobustShapeFactory;
+    PatternAbstractFactory::Factory* factory = new PatternAbstractFactory::RobustShapeFactory;
 #endif
     PatternAbstractFactory::Shape* shapes[3];
 
