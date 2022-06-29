@@ -1,3 +1,3 @@
 # BasicDesignPatterns
 - ### Builder
-<!-- - ### Factory Method -->
+- ### Factory Method 
