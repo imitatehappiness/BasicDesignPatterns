@@ -1,18 +1,23 @@
-# Design Patterns.
+# Design Patterns. 
+### Creational Patterns
 1. [Abstract Factory](#AbstractFactory)
 2. [Builder](#Builder)
 3. [Factory Method](#FactoryMethod)
+
 ## Abstract Factory <a name="AbstractFactory"></a>
 Предоставляет интерфейс для создания семейств связанных между собой или зависимых объектов без указания их конкретных классов.
 
-[[Example: C++ Code]](https://github.com/imitatehappiness/BasicDesignPatterns/blob/main/AbstractFactory.cpp)
+Example: [C++ Code](https://github.com/imitatehappiness/BasicDesignPatterns/blob/main/AbstractFactory.cpp)
 
 ## Builder <a name="Builder"></a>
 Отделяет конструирование сложного объекта от его представления, чтобы один процесс конструирования мог использоваться для создания различных представлений
 
+Example: [C++ Code](https://github.com/imitatehappiness/BasicDesignPatterns/blob/main/Builder.cpp)
+
 ## Factory Method <a name="FactoryMethod"></a>
 Определяет интерфейс для создания объектов позволяя подклассам решить, экземпляр какого класса следует создать. Позволяет классу передать ответсвенность за создание экземпляра в подклассы.
 
+Example: [C++ Code](https://github.com/imitatehappiness/BasicDesignPatterns/blob/main/FactoryMethod.cpp)
 
 <!--```c++
 
