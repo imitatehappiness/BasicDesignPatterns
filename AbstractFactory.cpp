@@ -18,7 +18,7 @@ protected:
 
 int Pizza::mTotal = 0;
 
-/// @class Circle - AbstructProduct
+/// @class HamAndMushroomPizza - AbstructProduct
 class HamAndMushroomPizza: public Pizza {
 public:
     void draw() {
@@ -26,7 +26,7 @@ public:
     }
 };
 
-/// @class Square - AbstructProduct
+/// @class DeluxePizza - AbstructProduct
 class DeluxePizza: public Pizza {
 public:
     void draw() {
@@ -34,7 +34,7 @@ public:
     }
 };
 
-/// @class Ellipse - AbstructProduct
+/// @class HawaiianPizza - AbstructProduct
 class HawaiianPizza: public Pizza {
 public:
     void draw() {
