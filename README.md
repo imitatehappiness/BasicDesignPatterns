@@ -28,7 +28,7 @@
 
   - Пользуется исключительно интерфейсами, которые объявлены в классах AbstractFactory и AbstractProduct
     
-<!-- Example: [C++ Code](https://github.com/imitatehappiness/BasicDesignPatterns/blob/main/AbstractFactory.cpp) -->
+Example: [C++ Code](https://github.com/imitatehappiness/BasicDesignPatterns/tree/main/patterns/creational/abstarctFactory)
 
 <!--  Builder -->
 ## Builder <a name="Builder"></a>
