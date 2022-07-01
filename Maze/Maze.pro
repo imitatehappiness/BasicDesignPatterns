@@ -4,6 +4,21 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
+        ../patterns/creational/MazeFactory.cpp \
+        ../patterns/creational/MazeFactory.cpp \
+        ../patterns/creational/MazeFactory.cpp \
+        ../patterns/creational/bombed/BombedMazeFactory.cpp \
+        ../patterns/creational/bombed/BombedMazeFactory.cpp \
+        ../patterns/creational/bombed/BombedRoom.cpp \
+        ../patterns/creational/bombed/BombedRoom.cpp \
+        ../patterns/creational/bombed/BombedWall.cpp \
+        ../patterns/creational/bombed/BombedWall.cpp \
+        ../patterns/creational/enchanted/EnchantedDoor.cpp \
+        ../patterns/creational/enchanted/EnchantedDoor.cpp \
+        ../patterns/creational/enchanted/EnchantedMazeFactory.cpp \
+        ../patterns/creational/enchanted/EnchantedMazeFactory.cpp \
+        ../patterns/creational/enchanted/EnchantedWall.cpp \
+        ../patterns/creational/enchanted/EnchantedWall.cpp \
         main.cpp
 
 HEADERS += \
