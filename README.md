@@ -49,5 +49,4 @@ Example: [C++ Code](https://github.com/imitatehappiness/BasicDesignPatterns/tree
 
 ![https://img.shields.io/badge/Language-C++-blue](https://img.shields.io/badge/Language-C++-blue)
 
-Sourse: [Priemioop.pdf](https://github.com/imitatehappiness/BasicDesignPatterns/files/9028295/Priemioop.pdf)
-
+Sourse: [Design Patterns](https://github.com/imitatehappiness/BasicDesignPatterns/files/9028323/default.pdf)
