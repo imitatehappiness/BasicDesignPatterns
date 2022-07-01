@@ -69,13 +69,14 @@ Example: [C++ Code](https://github.com/imitatehappiness/BasicDesignPatterns/tree
 
 + **Creator** - создатель:
 
-  - объявляет фабричный метод, возвращающий объект типа Product.
-Creator может также определять реализацию по умолчанию фабричного метода, который возвращает объект ConcreteProduct;
-  - может вызывать фабричный метод для создания объекта Product.
+  - объявляет фабричный метод, возвращающий объект типа Product
+Creator может также определять реализацию по умолчанию фабричного метода, который возвращает объект ConcreteProduct
+  - может вызывать фабричный метод для создания объекта Product
   
 + **ConcreteCreator** - конкретный создатель:
 
   - замещает фабричный метод, возвращающий объект СoncreteProduct
+  
  <!-- Example: [C++ Code](https://github.com/imitatehappiness/BasicDesignPatterns/blob/main/FactoryMethod.cpp) -->
 
 <!--```c++
