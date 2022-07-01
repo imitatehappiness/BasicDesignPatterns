@@ -1,11 +1,11 @@
 #ifndef ROOM_H
 #define ROOM_H
-#include <MapSide.h>
-#include <vector>
-#include <Direction.h>
+#include "MapSide.h">
+#include "vector"
+#include "Direction.h"
 class Room : public MapSide {
 public:
-    void setSide(Direction direction, MapSide mapSite) {
+    void setSide(Direction direction, MapSide* mapSide) {
 
     }
     MapSide* getSide(Direction direction) {
@@ -26,12 +26,12 @@ public:
             clone->sites.push_back(site);
         return clone;
     }
-
+    Room(int id) : mId(id) {
+    }
 private:
     std::vector<MapSide*> sites;
     int mId;
-    Room(int id) : mId(id) {
-    }
+
 
 };
 #endif // ROOM_H

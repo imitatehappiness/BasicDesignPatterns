@@ -1,10 +1,10 @@
 #ifndef MAZE_H
 #define MAZE_H
 
-#include <MapSide.h>
-#include <Maze.h>
-#include <Room.h>
-#include <Door.h>
+#include "MapSide.h"
+#include "Maze.h"
+#include "Room.h"
+#include "Door.h"
 #include <vector>
 
 class Maze {

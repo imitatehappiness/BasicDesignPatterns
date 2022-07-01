@@ -1,6 +1,6 @@
 #ifndef WALL_H
 #define WALL_H
-#include <MapSide.h>
+#include "MapSide.h"
 
 class Wall : public MapSide {
 public:

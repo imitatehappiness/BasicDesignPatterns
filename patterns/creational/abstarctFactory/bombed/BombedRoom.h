@@ -1,0 +1,15 @@
+#include "Room.h"
+
+class BombedRoom : public Room {
+public:
+    BombedRoom(int id): Room(id){
+    }
+
+    virtual void enter() {
+        setTimer();
+    }
+private:
+    void setTimer() {
+        // Logic
+    }
+};

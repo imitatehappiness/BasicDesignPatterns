@@ -1,14 +1,14 @@
 #ifndef DOOR_H
 #define DOOR_H
-#include <MapSide.h>
-#include <Room.h>
+#include "MapSide.h"
+#include "Room.h"
 class Door : public MapSide{
 public:
     Door(Room* room1, Room* room2, bool isOpen):
         mRoom1(room1), mRoom2(room2), mIsOpen(isOpen) {
     }
 
-    void open() {
+    virtual void open() {
         // logic
     }
 
