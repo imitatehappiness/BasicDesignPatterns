@@ -6,10 +6,8 @@ public:
     }
 
     virtual void enter() {
-        setTimer();
-    }
-private:
-    void setTimer() {
         // Logic
     }
+
+private:
 };

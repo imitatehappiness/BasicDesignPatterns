@@ -6,6 +6,7 @@ public:
     EnchantedDoor(Room* room1, Room* room2, bool isOpen) :  Door(room1, room2, isOpen){
     }
 
-    virtual void open() {
+    virtual void open(){
+        //logic
     }
 };
