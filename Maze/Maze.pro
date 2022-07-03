@@ -21,4 +21,6 @@ HEADERS += \
     Maze.h \
     MazeGame.h \
     Room.h \
-    Wall.h
+    Wall.h \
+    ../patterns/creational/builder/MazeBuilder.h \
+    ../patterns/creational/builder/StandartMazeBuilder.h

@@ -11,14 +11,20 @@
 #include "../patterns/creational/abstarctFactory/MazeFactory.h"
 #include "../patterns/creational/abstarctFactory/enchanted/EnchantedMazeFactory.h"
 #include "../patterns/creational/abstarctFactory/bombed/BombedMazeFactory.h"
+#include "../patterns/creational/builder/MazeBuilder.h"
+#include "../patterns/creational/builder/StandartMazeBuilder.h"
+#include <iostream>
+using namespace std;
 
 class MazeGame {
 public:
     void startGame(DesignPattern designPattern) {
+        srand(0);
         Maze* maze;
 
         switch(designPattern) {
             case AbstractFactory: maze = createMazeWithAbstractFactory(new EnchantedMazeFactory());
+            case Builder: maze = createMazeWithMazeBuilder(new StandardMazeBuilder());
         }
     }
 
@@ -42,6 +48,15 @@ public:
         room2->setSide(EAST,  factory->makeWall());
 
         return maze;
+    }
+
+    Maze* createMazeWithMazeBuilder(MazeBuilder* builder) {
+        builder->buildMaze();
+        builder->buildRoom(1);
+        builder->buildRoom(2) ;
+        builder->buildDoor(1, 2);
+
+        return builder->getMaze();
     }
 };
 #endif // MAZEGAME_H

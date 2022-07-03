@@ -6,6 +6,6 @@ using namespace std;
 
 int main(){
     MazeGame* mazeGame;
-    mazeGame->startGame(AbstractFactory);
+    mazeGame->startGame(Builder);
     return 0;
 }
