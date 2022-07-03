@@ -53,7 +53,7 @@ Example: [C++ Code](https://github.com/imitatehappiness/BasicDesignPatterns/tree
   - Представляет сложный конструируемый объект. ConcreteBuilder строит внутреннее представление продукта иопределяет процесс его сборки;
   - Включает классы, которые определяют составные части, в том числе интерфейсы для сборки конечного результата из частей
   
-<!--  Example: [C++ Code](https://github.com/imitatehappiness/BasicDesignPatterns/blob/main/Builder.cpp) -->
+Example: [C++ Code](https://github.com/imitatehappiness/BasicDesignPatterns/tree/main/patterns/creational/builder)
 
 <!--  Factory Method -->
 ## Factory Method <a name="FactoryMethod"></a>
