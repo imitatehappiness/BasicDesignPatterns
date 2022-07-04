@@ -3,6 +3,7 @@
 
 #include "Maze.h"
 #include "Room.h"
+#include "Wall.h"
 #include "Direction.h"
 #include "MazeBuilder.h"
 #include <iostream>
@@ -10,8 +11,6 @@ using namespace std;
 
 class StandardMazeBuilder : public MazeBuilder{
 public:
-   // StandardMazeBuilder();
-
     virtual void  buildMaze();
     virtual void  buildRoom(int);
     virtual void  buildDoor(int, int);
@@ -19,33 +18,44 @@ public:
 
 private:
     Direction commonWall(Room*, Room*);
-    Maze* mCurrentMazel;
+    Maze* mCurrentMaze;
 };
 
 void StandardMazeBuilder::buildMaze(){
-    mCurrentMazel = new Maze;
+    mCurrentMaze = new Maze;
 }
 
 void StandardMazeBuilder::buildRoom(int id){
-    mCurrentMazel->addRoom(new Room(id));
+    Room* room = new Room(id);
+    mCurrentMaze->addRoom(room);
+
+    room->setSide(NORTH, new Wall);
+    room->setSide(SOUTH, new Wall);
+    room->setSide(EAST,  new Wall);
+    room->setSide(WEST,  new Wall);
 }
 
 void StandardMazeBuilder::buildDoor(int from, int to){
-    vector<Room*> rooms = mCurrentMazel->getRooms();
+    vector<Room*> rooms = mCurrentMaze->getRooms();
 
-    Door* door = new Door(rooms[from], rooms[to], rand() % 2);
+    int isOpen = rand() % 2;
+
+    Door* door = new Door(rooms[from], rooms[to], isOpen);
     rooms[from]->setSide(commonWall(rooms[from], rooms[to]), door);
     rooms[to]->setSide(commonWall(rooms[to], rooms[from]), door);
 
-    mCurrentMazel->addDoor(door);
+
+    mCurrentMaze->addDoor(door);
 }
 
 Maze *StandardMazeBuilder::getMaze(){
-    return mCurrentMazel;
+    return mCurrentMaze;
 }
 
 Direction StandardMazeBuilder::commonWall(Room *, Room *){
-    return NORTH;
+    int directionInd = rand() % 4 + 1;
+    Direction direction = static_cast<Direction>(directionInd);
+    return direction;
 }
 
 #endif

@@ -11,8 +11,6 @@ public:
     virtual void  buildRoom(int room) = 0;
     virtual void  buildDoor(int from, int to) = 0;
     virtual Maze* getMaze() = 0;
-protected:
-    //MazeBuilder();
 };
 
 #endif

@@ -7,6 +7,5 @@ public:
     }
 
     virtual void open(){
-        //logic
     }
 };

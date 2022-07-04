@@ -2,6 +2,5 @@
 class BombedWall : public Wall {
 public:
     void bombWall() {
-        //logic
     }
 };
