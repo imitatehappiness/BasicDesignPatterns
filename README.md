@@ -100,7 +100,7 @@ Creator может также определять реализацию по у�
   - создает новый объект, обращаясь к прототипу с запросом клонировать
 себя
 
- <!-- Example: [C++ Code](https://github.com/imitatehappiness/BasicDesignPatterns/blob/main/FactoryMethod.cpp) -->
+Example: [C++ Code](https://github.com/imitatehappiness/BasicDesignPatterns/tree/main/patterns/creational/prototype)
 
 # Sourse: 
 
