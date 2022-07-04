@@ -51,11 +51,13 @@ public:
 
     Maze* createMazeWithMazeBuilder(MazeBuilder* builder) {
         builder->buildMaze();
-        builder->buildRoom(1);
-        builder->buildRoom(2) ;
-        builder->buildDoor(1, 2);
+        builder->buildRoom(0);
+        builder->buildRoom(1) ;
+        builder->buildDoor(0, 1);
 
         return builder->getMaze();
     }
+
+
 };
 #endif // MAZEGAME_H

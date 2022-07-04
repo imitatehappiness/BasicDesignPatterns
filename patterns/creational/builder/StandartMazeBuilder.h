@@ -27,35 +27,31 @@ void StandardMazeBuilder::buildMaze(){
 
 void StandardMazeBuilder::buildRoom(int id){
     Room* room = new Room(id);
-    mCurrentMaze->addRoom(room);
 
     room->setSide(NORTH, new Wall);
     room->setSide(SOUTH, new Wall);
     room->setSide(EAST,  new Wall);
     room->setSide(WEST,  new Wall);
+
+    mCurrentMaze->addRoom(room);
 }
 
 void StandardMazeBuilder::buildDoor(int from, int to){
     vector<Room*> rooms = mCurrentMaze->getRooms();
 
-    int isOpen = rand() % 2;
-
-    Door* door = new Door(rooms[from], rooms[to], isOpen);
+    Door* door = new Door(rooms[from], rooms[to], rand() % 2);
     rooms[from]->setSide(commonWall(rooms[from], rooms[to]), door);
     rooms[to]->setSide(commonWall(rooms[to], rooms[from]), door);
-
 
     mCurrentMaze->addDoor(door);
 }
 
-Maze *StandardMazeBuilder::getMaze(){
+Maze* StandardMazeBuilder::getMaze(){
     return mCurrentMaze;
 }
 
-Direction StandardMazeBuilder::commonWall(Room *, Room *){
-    int directionInd = rand() % 4 + 1;
-    Direction direction = static_cast<Direction>(directionInd);
-    return direction;
+Direction StandardMazeBuilder::commonWall(Room* room1, Room* room2){
+    return static_cast<Direction>(rand() % 4);
 }
 
 #endif

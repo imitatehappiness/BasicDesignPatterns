@@ -14,6 +14,7 @@ public:
     void addRoom(Room* room) {
         mRooms.push_back(room);
     }
+
     void addDoor(Door* door) {
         mDoors.push_back(door);
     }
