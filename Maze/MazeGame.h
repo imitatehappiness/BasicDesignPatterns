@@ -19,7 +19,6 @@ using namespace std;
 class MazeGame {
 public:
     void startGame(DesignPattern designPattern) {
-        srand(0);
         Maze* maze;
 
         switch(designPattern) {

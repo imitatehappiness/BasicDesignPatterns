@@ -22,10 +22,12 @@ public:
     }
     Room* clone() {
         Room* clone = new Room(mId);
-        for(MapSide* site : sites)
+        for(MapSide* site : sites){
             clone->sites.push_back(site);
+        }
         return clone;
     }
+
     Room(int id) : mId(id) {
     }
 private:

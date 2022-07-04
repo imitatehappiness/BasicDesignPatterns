@@ -16,8 +16,8 @@ public:
         // logic
     }
 
-    Door* clone(Room* clonedRoom1, Room* clonedRoom2) {
-        return new Door(clonedRoom1, clonedRoom2, mIsOpen);
+    Door* clone(Room* clonedRoom1, Room* clonedRoom2, bool isOpen) {
+        return new Door(clonedRoom1, clonedRoom2, isOpen);
     }
 
     Room* mRoom1;

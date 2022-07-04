@@ -1,11 +1,12 @@
 #include <iostream>
 #include "MazeGame.h"
 #include "DesignPatterns.h"
-
+#include <ctime>
 using namespace std;
 
 int main(){
-    MazeGame* mazeGame;
+    srand( time( 0 ) );
+    MazeGame* mazeGame = new MazeGame;
     mazeGame->startGame(Builder);
     return 0;
 }

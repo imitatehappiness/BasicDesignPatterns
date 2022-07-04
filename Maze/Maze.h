@@ -17,26 +17,31 @@ public:
     void addDoor(Door* door) {
         mDoors.push_back(door);
     }
+
     Room* findRoom(int id) {
-        // logic
         return mRooms[id];
     }
+
     std::vector<Room*> getRooms() {
         return mRooms;
     }
+
     std::vector<Door*> getDoors() {
         return mDoors;
     }
+
     Maze* clone() {
         Maze* clone = new Maze();
 
         for (size_t i = 0; i < mRooms.size(); i++){
             clone->mRooms.push_back(mRooms[i]);
         }
+
         for (size_t i = 0; i < mDoors.size(); i++) {
             Door* clonedDoor = mDoors[i];
-            clone->mDoors.push_back(clonedDoor->clone(mRooms[clonedDoor->mRoom1->getId()], mRooms[clonedDoor->mRoom2->getId()]));
+            clone->mDoors.push_back(clonedDoor->clone(mRooms[clonedDoor->mRoom1->getId()], mRooms[clonedDoor->mRoom2->getId()], clonedDoor->mIsOpen));
         }
+
         return clone;
     }
 private:
