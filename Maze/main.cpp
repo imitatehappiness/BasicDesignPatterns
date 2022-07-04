@@ -7,6 +7,6 @@ using namespace std;
 int main(){
     srand( time( 0 ) );
     MazeGame* mazeGame = new MazeGame;
-    mazeGame->startGame(Builder);
+    mazeGame->startGame(Prototype);
     return 0;
 }

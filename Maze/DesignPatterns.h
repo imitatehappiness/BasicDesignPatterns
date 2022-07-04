@@ -3,5 +3,6 @@
 enum DesignPattern {
     AbstractFactory,
     Builder,
+    Prototype,
 };
 #endif // DESIGNPATTERNS_H

@@ -13,6 +13,8 @@
 #include "../patterns/creational/abstarctFactory/bombed/BombedMazeFactory.h"
 #include "../patterns/creational/builder/MazeBuilder.h"
 #include "../patterns/creational/builder/StandartMazeBuilder.h"
+#include "../patterns/creational/prototype/MazePrototypeFactory.h"
+
 #include <iostream>
 using namespace std;
 
@@ -22,8 +24,9 @@ public:
         Maze* maze;
 
         switch(designPattern) {
-            case AbstractFactory: maze = createMazeWithAbstractFactory(new EnchantedMazeFactory());
-            case Builder: maze = createMazeWithMazeBuilder(new StandardMazeBuilder());
+        case AbstractFactory: maze = createMazeWithAbstractFactory(new EnchantedMazeFactory());
+        case Builder: maze = createMazeWithMazeBuilder(new StandardMazeBuilder());
+        case Prototype: maze = createMazeWithPrototypeFactory();
         }
     }
 
@@ -58,6 +61,34 @@ public:
         return builder->getMaze();
     }
 
+    Maze* createMazeWithPrototypeFactory(){
+        MazePrototypeFactory* bombedFactory = new MazePrototypeFactory(
+                    new Maze(),
+                    new BombedWall(),
+                    new BombedRoom(0),
+                    new Door(new BombedRoom(0), new BombedRoom(0), true)
+                    );
+
+        Maze* maze  = bombedFactory->makeMaze();
+        Room* room1 = bombedFactory->makeRoom(1);
+        Room* room2 = bombedFactory->makeRoom(2);
+        Door* door  = bombedFactory->makeDoor(room1, room2) ;
+
+        maze->addRoom(room1);
+        maze->addRoom(room2);
+
+        room1->setSide(NORTH, bombedFactory->makeWall());
+        room1->setSide(WEST,  bombedFactory->makeWall());
+        room1->setSide(SOUTH, door);
+        room1->setSide(EAST,  bombedFactory->makeWall());
+
+        room2->setSide(NORTH, door);
+        room2->setSide(WEST,  bombedFactory->makeWall());
+        room2->setSide(SOUTH, bombedFactory->makeWall());
+        room2->setSide(EAST,  bombedFactory->makeWall());
+
+        return maze;
+    }
 
 };
 #endif // MAZEGAME_H

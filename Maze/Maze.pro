@@ -14,6 +14,7 @@ HEADERS += \
     ../patterns/creational/abstarctFactory/enchanted/EnchantedDoor.h \
     ../patterns/creational/abstarctFactory/enchanted/EnchantedMazeFactory.h \
     ../patterns/creational/abstarctFactory/enchanted/EnchantedWall.h \
+    ../patterns/creational/prototype/MazePrototypeFactory.h \
     DesignPatterns.h \
     Direction.h \
     Door.h \
