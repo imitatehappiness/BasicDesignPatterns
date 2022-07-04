@@ -3,7 +3,9 @@
 1. [Abstract Factory](#AbstractFactory)
 2. [Builder](#Builder)
 3. [Factory Method](#FactoryMethod)
-
+3. [Prototype](#Prototype)
+### Structural Patterns
+### Behavioral Patterns
 <!--  Abstract Factory -->
 ## Abstract Factory <a name="AbstractFactory"></a>
 Предоставляет интерфейс для создания семейств связанных между собой или зависимых объектов без указания их конкретных классов.
@@ -28,7 +30,8 @@
 
   - Пользуется исключительно интерфейсами, которые объявлены в классах AbstractFactory и AbstractProduct
     
-Example: [C++ Code](https://github.com/imitatehappiness/BasicDesignPatterns/tree/main/patterns/creational/abstarctFactory)
+
+Example: [C++ Code](https://github.com/imitatehappiness/BasicDesignPatterns/tree/main/patterns/creational/abstarctFactory) 
 
 <!--  Builder -->
 ## Builder <a name="Builder"></a>
@@ -79,12 +82,25 @@ Creator может также определять реализацию по у�
   
  <!-- Example: [C++ Code](https://github.com/imitatehappiness/BasicDesignPatterns/blob/main/FactoryMethod.cpp) -->
 
-<!--```c++
+<!--  Prototype -->
+## Prototype <a name="Prototype"></a>
 
-```
--->
+Задает виды создаваемых объектов с помощью экземпляра-прототипа и создает новые объекты путем копирования этого прототипа.
 
-![https://img.shields.io/badge/Language-C++-blue](https://img.shields.io/badge/Language-C++-blue)
++ **Prototype** - прототип:
+
+  - объявляет интерфейс для клонирования самого себя
+  
++ **ConcretePrototype** - конкретный прототип:
+
+  - реализует операцию клонирования себя
+
++ **Client** - клиент:
+
+  - создает новый объект, обращаясь к прототипу с запросом клонировать
+себя
+
+ <!-- Example: [C++ Code](https://github.com/imitatehappiness/BasicDesignPatterns/blob/main/FactoryMethod.cpp) -->
 
 # Sourse: 
 
@@ -92,4 +108,6 @@ Creator может также определять реализацию по у�
 
 [Design Patterns ENG Version](https://github.com/imitatehappiness/BasicDesignPatterns/files/9028336/P020101022562155422801.pdf)
 
+--- 
+![https://img.shields.io/badge/Language-C++-blue](https://img.shields.io/badge/Language-C++-blue) 
 
