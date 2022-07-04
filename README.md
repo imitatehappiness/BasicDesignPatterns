@@ -4,7 +4,8 @@
 2. [Builder](#Builder)
 3. [Factory Method](#FactoryMethod)
 3. [Prototype](#Prototype)
-
+### Structural Patterns
+### Behavioral Patterns
 <!--  Abstract Factory -->
 ## Abstract Factory <a name="AbstractFactory"></a>
 Предоставляет интерфейс для создания семейств связанных между собой или зависимых объектов без указания их конкретных классов.
