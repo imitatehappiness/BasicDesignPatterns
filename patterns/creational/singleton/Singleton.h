@@ -30,8 +30,8 @@ public:
 protected:
     SingletonMazeFactory(){
     }
-    //SingletonMazeFactory(const SingletonMazeFactory&);
-    //SingletonMazeFactory& operator =(const SingletonMazeFactory&);
+    SingletonMazeFactory(const SingletonMazeFactory&);
+    SingletonMazeFactory& operator =(const SingletonMazeFactory&);
 private:
     static SingletonMazeFactory* instance;
 };
