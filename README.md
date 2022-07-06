@@ -114,6 +114,8 @@ Example: [C++ Code](https://github.com/imitatehappiness/BasicDesignPatterns/tree
   - Может нести ответственность за создание собственного уникального
 экземпляра
 
+Example: [C++ Code](https://github.com/imitatehappiness/BasicDesignPatterns/tree/main/patterns/creational/singleton) 
+
 # Sourse: 
 
 [Design Patterns RUS Version](https://github.com/imitatehappiness/BasicDesignPatterns/files/9028323/default.pdf)
